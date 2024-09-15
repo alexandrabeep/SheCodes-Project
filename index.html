@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+BE+WAL:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+BE+WAL:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="input-city-form" action="/submit">
+        <div class="form-content">
+          <label for="location">Location: </label>
+          <input
+            type="text"
+            id="input-city"
+            placeholder="Enter city"
+            required
+          />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <hr />
+      <div id="parent-element">
+        <div id="element">
+          <h1 id="current-city">Eindhoven</h1>
+          <h2 class="today-forecast">
+            🌥️
+            <div id="current-temperature">25°C</div>
+          </h2>
+        </div>
+        <div id="element">
+          <ul class="today-forecast">
+            <li id="week-day">Monday</li>
+            <li id="current-time">13:52</li>
+            <li class="weather-condition">Cloudy with a chance of rain</li>
+            <li class="uv-index">UV-index: 5</li>
+            <li class="humidity">Humidity: 54%</li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <footer>
+        This project was coded by
+        <a
+          href="https://www.shecodes.io/graduates/137971-alexandra-ufenast-smolders"
+          target="_blank"
+          >Alexandra Ufenast Smolders</a
+        >
+      </footer>
+    </div>
+    <script src="src/java.js"></script>
+  </body>
+</html>
